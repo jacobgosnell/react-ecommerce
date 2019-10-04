@@ -2,7 +2,13 @@
 @import "headernavbar";
 
 html {
+  // default font size is 16px
+  // 16 px * .625 = 10px (much better base font than 16)
   font-size: 62.5%; // 1rem is 10px
+}
+
+h1 {
+  font-size: 1.5rem; // 15px
 }
 
 // Every element, after, and before has no margin, padding, and inherited box-sizing.
