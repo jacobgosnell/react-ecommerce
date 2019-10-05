@@ -1,6 +1,3 @@
-@import "layout";
-@import "headernavbar";
-
 html {
   // default font size is 16px
   // 16 px * .625 = 10px (much better base font than 16)
@@ -36,3 +33,6 @@ body {
   display: grid;
   justify-items: center;
 }
+
+@import "layout";
+@import "headernavbar";
