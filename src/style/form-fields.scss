@@ -21,12 +21,14 @@
 
 .form-button {
   &__button {
-    font-size: 16px;
-    color: white;
     height: 38px;
     width: 243px;
     border-radius: 20px;
     background-color: #00cb79;
+
+    font-size: 16px;
+    color: white;
+
     &:focus {
       outline: none;
     }
