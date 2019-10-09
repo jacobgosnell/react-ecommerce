@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 
-class SignUp extends Component {
+import SignUpForm from './signupForm';
+import PageTitle from '../pageTitle';
+
+class SignIn extends Component {
+
+  onSubmit = (fields) => {
+    console.log(fields);
+  }
+  
   render() {
     return (
       <div className='sign-up'>
-        Sign Up
+        <PageTitle className='sign-up__page-title' title='Register' /> 
+        <SignUpForm onSubmit={this.onSubmit} className='sign-up__form'/>
       </div>
-    )
+    );
   }
 }
 
-export default SignUp;
+export default SignIn;
