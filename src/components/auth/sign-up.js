@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import SignUpForm from './signupForm';
 import PageTitle from '../pageTitle';
 
-class SignIn extends Component {
+class SignUp extends Component {
 
   onSubmit = (fields) => {
     console.log(fields);
@@ -19,4 +19,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default SignUp;
