@@ -19,5 +19,8 @@
     & > * {
       text-decoration: underline;
     }
+    .details__item {
+      text-decoration-line: none;
+    }
   }
 }

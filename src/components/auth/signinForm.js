@@ -51,7 +51,7 @@ class SignInForm extends Component {
         name='login' 
         placeholder='Login' 
         component={FormButton}
-        onClick={() => console.log('tryna submit')}
+        onClick={() => history.push('/account')}
       />
       <Details className='sign-in-form__details' title='QuickLinks' links={links}/>
       </form>
