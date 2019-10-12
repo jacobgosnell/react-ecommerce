@@ -26,6 +26,6 @@ function mapStateToProps(state) {
     navbarLinks
   }
 }
-avbar = connect(mapStateToProps)(Navbar);
+Navbar = connect(mapStateToProps)(Navbar);
 
 export default Navbar;
