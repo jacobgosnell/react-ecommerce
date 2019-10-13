@@ -5,6 +5,11 @@ import PageTitle from '../pageTitle';
 
 class SignIn extends Component {
 
+  componentDidMount() {
+    this.props.setHeaderLinks([]);
+    this.props.setNavbarLinks([]);
+  }
+
   onSubmit = (fields) => {
     console.log(fields);
   }
@@ -18,5 +23,7 @@ class SignIn extends Component {
     );
   }
 }
+
+SignIn = connect(null, actions)(SignIn)
 
 export default SignIn;
