@@ -17,7 +17,7 @@ export function fetchUserPurchases() {
       {
         _id: 0,
         title: 'purchase 2',
-        amount: 19.40,
+        total: 19.40,
         orderNumber: 'ABASD876ASD',
         orderDate: new Date().toDateString(),
         creditCard: '-0000',
