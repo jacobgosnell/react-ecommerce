@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 import PageTitle from '../pageTitle';
+import AccountInformationForm from './accountInformationForm';
 
-class AccountInformationForm extends Component {
+class AccountInformation extends Component {
 
   onSubmit = (fields) => {
     console.log(fields);
