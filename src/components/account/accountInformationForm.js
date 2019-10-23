@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 import { FormInput, FormButton, LongGrayButton } from '../formFields';
-import Details from '../details';
-import history from '../../history';
 
 class AccountInformationForm extends Component {
   constructor() {
@@ -53,7 +51,7 @@ class AccountInformationForm extends Component {
           placeholder='Zipcode'
           name='zipcode'
           component={FormInput}/>
-
+          <div key={3} className='account-information-form__line'></div>
           {
             this.state.showPasswords ?
               [
@@ -74,7 +72,20 @@ class AccountInformationForm extends Component {
                 title='Confirm Password'
                 placeholder='Confirm Password'
                 name='confirm'
-                component={FormInput}/>
+                component={FormInput}/>,
+                <Field key={4} className='account-information-form__update-information'
+                onClick={() => hthis.setState({ showPasswords: false })}
+                type='submit'
+                title='Update Information'
+                name='update-information'
+                component={FormButton}/>,
+                <Field key={5} className='account-information-form__cancel'
+                onClick={() => this.setState({ showPasswords: false })}
+                type='button'
+                title='Cancel'
+                name='cancel'
+                short={true}
+                component={FormButton}/>
               ]
 
             :
@@ -85,6 +96,7 @@ class AccountInformationForm extends Component {
               title='Change Password'
               name='change-password'
               component={LongGrayButton}/>
+              
           }
       </form>
     );
