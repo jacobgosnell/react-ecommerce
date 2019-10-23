@@ -6,25 +6,15 @@ import Details from '../details';
 import history from '../../history';
 
 class AccountInformationForm extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      showPasswords: false
+    }
+  }
   render() {
     const { className, handleSubmit } = this.props;
-    const links = [
-      {
-        _id: 0,
-        title: 'Not registered? Create an account here.',
-        onClick: () => history.push('/signup')
-      },
-      {
-        _id: 1,
-        title: 'Forgot account email?',
-        onClick: () => console.log('forgot email')
-      },
-      {
-        _id: 2,
-        title: 'Forgot password?',
-        onClick: () => console.log('forgot password')
-      }
-    ]
     return (
       <form onSubmit={handleSubmit} className={`${className} account-information-form`}>
         <Field className='account-information-form__name'
@@ -63,22 +53,39 @@ class AccountInformationForm extends Component {
           placeholder='Zipcode'
           name='zipcode'
           component={FormInput}/>
-        <Field classname='account-information-form__change-password'
-          onClick={() => console.log('tryna show passwords')}
-          type='button'
-          labelTitle='Password'
-          title='Change Password'
-          name='change-password'
-          component={LongGrayButton}/>
-      <Field 
-        className='sign-in-form__login' 
-        type='submit'
-        title='Login'
-        name='login' 
-        placeholder='Login' 
-        component={FormButton}
-        onClick={() => history.push('/account')}
-      />
+
+          {
+            this.state.showPasswords ?
+              [
+                <Field key={0} className='account-information-form__current'
+                type='password'
+                title='Current Password'
+                placeholder='Current Password'
+                name='current'
+                component={FormInput}/>,
+                <Field key={1} className='account-information-form__new'
+                type='password'
+                title='New Password'
+                placeholder='New Password'
+                name='new'
+                component={FormInput}/>,
+                <Field key={2} className='account-information-form__confirm'
+                type='password'
+                title='Confirm Password'
+                placeholder='Confirm Password'
+                name='confirm'
+                component={FormInput}/>
+              ]
+
+            :
+              <Field className='account-information-form__change-password'
+              onClick={() => this.setState({ showPasswords: true })}
+              type='button'
+              labelTitle='Password'
+              title='Change Password'
+              name='change-password'
+              component={LongGrayButton}/>
+          }
       </form>
     );
   }
