@@ -14,7 +14,8 @@ import history from './history';
 import Layout from "./components/layout";
 import SignIn from "./components/auth/sign-in";
 import SignUp from "./components/auth/sign-up";
-import Account from './components/account/account';
+import Account from "./components/account/account";
+import Shop  from "./components/shop/shop";
 
 function main() {
   ReactDOM.render(
@@ -27,6 +28,8 @@ function main() {
             <Route path='/signup' exact component={SignUp}/>
 
             <Route path='/account' exact component={Account}/>
+
+            <Route path='/shop' exact component={Shop}/>
           </Switch>
         </Layout>
       </Router>

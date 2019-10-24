@@ -33,6 +33,8 @@ body {
 
 @import "layout";
 @import "headernavbar";
+
+// AUTH
 @import "auth/signin";
 @import "auth/signup";
 
@@ -40,6 +42,10 @@ body {
 @import "form-fields";
 @import "details";
 
+// ACCOUNT
 @import "account/account";
 @import "account/purchase-history";
 @import "account/account-information";
+
+// SHOP
+@import 'shop/shop';
