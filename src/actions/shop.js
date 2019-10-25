@@ -2,7 +2,8 @@ import {
   SET_SHOP_CATEGORIES,
   SET_NAVBAR_LINKS,
   SET_SHOP_PRODUCTS,
-  FILTER_PRODUCTS_WITH_CATEGORY_ID
+  FILTER_PRODUCTS_WITH_CATEGORY_ID,
+  FILTER_PRODUCTS_WITH_QUERY
 } from './types';
 
 export function filterProductsWithQuery(fields) {
