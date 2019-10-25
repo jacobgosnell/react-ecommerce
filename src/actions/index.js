@@ -11,7 +11,9 @@ import {
 
 import {
   fetchShopCategories,
-  fetchShopProducts
+  fetchShopProducts,
+  filterProductsWithCategoryId,
+  filterProductsWithQuery
 } from './shop';
 
 export {
@@ -23,5 +25,7 @@ export {
   setPurchaseDetail,
 
   fetchShopCategories,
-  fetchShopProducts
+  fetchShopProductsWithCategoryId,
+
+  filterProductsWithQuery
 };
