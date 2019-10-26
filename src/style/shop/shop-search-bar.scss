@@ -22,17 +22,20 @@
 .search-bar-grid {
   display: grid;
   grid-template-rows: [s] 1fr [e];
-  grid-template-columns: 20px [s] 1fr [e];
-   &__icon {
-      grid-row: s/e;
-      grid-column: s/icon-e;
-      font-size: 18px;
-      z-index: 100;
-      align-self: center;
-   }
-   &__input {
-      grid-row: s/e;
-      grid-column: 1/e;
-      padding-left: 50px;
+  grid-template-columns: 20px [s] 20px [icon-e] 1fr [e];
+
+  &__icon {
+    grid-row: s/e;
+    grid-column: s/icon-e;
+    font-size: 18px;
+    z-index: 100;
+    align-self: center;
+  }
+  
+  &__input {
+    grid-row: s/e;
+    grid-column: 1/e;
+
+    padding-left: 50px;
   }
 } 
