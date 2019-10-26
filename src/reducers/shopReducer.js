@@ -20,9 +20,10 @@ export default function(state = INITIAL_STATE, action) {
         categories
       }
     case SET_SHOP_PRODUCTS:
+      const products = action.payload;
       return {
         ...state,
-        product: action.payload
+        products
       }
     case FILTER_PRODUCTS_WITH_CATEGORY_ID:
       var filteredProducts = [];

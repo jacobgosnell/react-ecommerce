@@ -4,7 +4,7 @@ import GreenPriceTag from '../greenPriceTag';
 
 class ShopProduct extends Component {
   render() {
-    const { title, description } = this.props;
+    const { title, description, price } = this.props;
     return (
       <div className='shop-product'>
         <div className='shop-product__title'>

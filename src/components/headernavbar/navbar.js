@@ -30,9 +30,10 @@ class Navbar extends Component {
 }
 
 function mapStateToProps(state) {
-  const { navbarLinks } = state.headerNavbar;
+  const { navbarLinks, onClick } = state.headerNavbar;
   return {
-    navbarLinks
+    navbarLinks, 
+    onClick
   }
 }
 Navbar = connect(mapStateToProps, actions)(Navbar);
