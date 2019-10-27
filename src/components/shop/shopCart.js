@@ -8,9 +8,19 @@ function CartButton({className, icon}) {
   )
 }
 
-function CartContent({ className }) {
+function CartContent({ className, products }) {
+  let count = products.length;
   return (
     <div className={`${className} cart-content`}>
+      <div className={`${className} cart-content__title`}>
+        Cart ({count})
+      </div>
+      <div className={`${className} cart-content__products`}>
+      
+      </div>
+      <div className={`${className} cart-content__footer`} products={[4]}>
+      
+      </div>
       
     </div>
   )
