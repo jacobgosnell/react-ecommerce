@@ -56,8 +56,8 @@ class Shop extends Component {
 }
 
 function mapStateToProps(state) {
-  const { categories, filteredProducts } = state.shop;
-  return { categories, filteredProducts }
+  const { categories, filteredProducts, products } = state.shop;
+  return { categories, filteredProducts, products }
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
