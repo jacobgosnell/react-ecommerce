@@ -49,7 +49,7 @@ class Shop extends Component {
             })
           }
         </div>
-        <ShopCart className='shop__cart'/>
+        <ShopCart className='shop-cart'/>
       </div>
     )
   }
