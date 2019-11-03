@@ -5,6 +5,7 @@ import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
 import ShopCart from './shopCart';
+import CartButton from './cartButton';
 
 class Shop extends Component {
   constructor() {
@@ -43,6 +44,15 @@ class Shop extends Component {
     this.props.filterProductsWithQuery(fields)
   }
 
+  handleAddToCart = () => {
+    if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+      document.getElementById('shop-cart').classList.remove('cart-hidden');
+      document.getElementById('cart-button').classList.add('cart-hidden');
+    } else {
+      document.getElementById('cart-button').classList.remove('cart-hidden');
+    }
+  }
+
   render() {
     return (
       <div className='shop'>
@@ -59,6 +69,7 @@ class Shop extends Component {
         {
           this.state.showCart ? <ShopCart className='shop__cart'/> : ''
         }
+        <CartButton id={'cart-button'} onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus' />
       </div>
     )
   }
