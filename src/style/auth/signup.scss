@@ -36,6 +36,7 @@
   &__line {
     grid-row: line-s/line-e;
     border-top: 1px solid #ccc;
+    margin-bottom: 24px;
   }
   &__login {
     grid-row: buttons-s/buttons-e;

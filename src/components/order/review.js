@@ -14,7 +14,7 @@ class Review extends Component {
   }
 
   onSubmit = (fields) => {
-    console.log('fields');
+    console.log(`${fields}`);
   }
 
   render() {
