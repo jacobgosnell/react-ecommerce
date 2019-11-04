@@ -23,7 +23,7 @@ class Review extends Component {
         <PageTitle className='review__page-title' title='Order Review' />
         <ReviewForm className='review__form' onSubmit={this.onSubmit} />
       </div>
-    )
+    );
   }
 }
 
