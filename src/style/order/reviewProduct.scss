@@ -1,0 +1,25 @@
+.review-product {
+  display: grid;
+  grid-template-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] .5fr [price-e];
+  grid-template-rows: [s] 1fr [e]; 
+
+  & > * {
+    grid-row: s/e;
+  }
+
+  &__image {
+    
+  }
+
+  &__title {
+
+  }
+
+  &__quantity {
+
+  }
+
+  &__price {
+
+  }
+}
