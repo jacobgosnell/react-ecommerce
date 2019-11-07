@@ -29,4 +29,36 @@
     grid-row: buttons-s/buttons-e;
     grid-column: proceed-s/proceed-e;
   }
+  &__details {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    justify-self: end;
+    align-self: end;
+    transform: translateX(-40px) translateY(60px);
+  }
+}
+
+.review-detail {
+  display: grid;
+  grid-template-columns: [title-s] 1fr [title-e] 65px [price-s] 1fr [price-e];
+  grid-template-rows: 1fr;
+  &__title {
+    grid-column: title-s/title-e;
+    grid-row: 1/-1;
+    text-align: right;
+    font-size: 14px;
+  }
+  &__price {
+    grid-column: price-s/price-e;
+    grid-row: 1/-1;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.review-detail-green {
+  &__price,
+  &__title {
+    color: #00CB79
+  }
 }
