@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import { UnderlinedTitle, InfoTitle } from './infohelp';
+import { UnderlinedTitle, InfoTitle } from './infoHelp';
 class OrderSummary extends Component {
   render() {
     const { className } = this.props;
